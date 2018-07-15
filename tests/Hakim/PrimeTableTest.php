@@ -62,4 +62,11 @@ class PrimeTableTest extends TestCase
         $result = PrimeTable::get2dArraySquareString(PrimeTable::createPrimeMultiTable(2));
         $this->assertEquals($result,$expectedResult);
     }
+    
+    public function testGeneratePrimes20000()
+    {
+        $result = PrimeTable::generatePrimes(20000);
+        $this->assertEquals(count($result),20000);
+        
+    }
 }
