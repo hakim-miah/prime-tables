@@ -36,4 +36,22 @@ Class PrimeTable {
             }
             return true;
         }
+        
+        /**
+         * adapted from https://gist.github.com/lawlesst/2731888
+         * and https://pthree.org/2007/09/05/prime-numbers-in-python/
+         * @param int $n
+         */
+        public static function isPrime(int $n) : bool
+        {
+            $i = 2;
+            while ($i <= sqrt($n))
+            {
+                if ($n % $i == 0) {
+                    return false;
+                }
+                $i++;
+            }
+            return true;
+        }
 }
