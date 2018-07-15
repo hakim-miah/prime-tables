@@ -54,4 +54,28 @@ Class PrimeTable {
             }
             return true;
         }
+        
+        /**
+         * Using != is faster than <= and incrementing the totalFound and 
+         * checkingis its value is faster than counting the array size (count() 
+         * or .size) each iteration.
+         * @param int $n
+         * @return array
+         */
+        public static function generatePrimes(int $n) : array
+        {
+            if ($n === 1) {
+                return [];
+            }
+            $primes = []; $totalFound = 0; $i=2;
+            while ($totalFound != $n) {        
+                if (self::isPrime($i)) {
+                   $primes[] = $i;
+                   $totalFound++;
+                }
+                $i++;
+            }
+            return $primes;
+        }
+        
 }
