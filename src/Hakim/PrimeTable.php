@@ -94,5 +94,18 @@ Class PrimeTable {
             }
             return $primeTable;
         }
-
+        
+        public static function get2dArraySquareString(array $arr) : string 
+        {
+            $length = count($arr);
+            $str = "";
+            for ($i=0; $i< $length;$i++) {
+                $str.= '| ';
+                for ($j = 0; $j < $length; $j++) {
+                    $str.= "{$arr[$i][$j]} |";
+                }
+                $str .= PHP_EOL;
+            }
+            return $str;
+        }
 }
