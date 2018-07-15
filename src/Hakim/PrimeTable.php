@@ -21,7 +21,7 @@ Class PrimeTable {
 	public function __construct(int $n, array $argv)
         {
             $this->numericInput = $n;
-            $this->cmdLineArgs = $arvg;
+            $this->cmdLineArgs = $argv;
 	}
         
         /**
