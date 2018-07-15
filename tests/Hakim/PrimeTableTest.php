@@ -54,4 +54,12 @@ class PrimeTableTest extends TestCase
         $this->assertEquals($result,$expectedOutput);
     }
     
+    public function testGet2dArraySquareString()
+    {
+        $expectedResult ='|  |2 |3 |'.PHP_EOL
+                        .'| 2 |4 |6 |'.PHP_EOL
+                        .'| 3 |6 |9 |'.PHP_EOL;
+        $result = PrimeTable::get2dArraySquareString(PrimeTable::createPrimeMultiTable(2));
+        $this->assertEquals($result,$expectedResult);
+    }
 }
