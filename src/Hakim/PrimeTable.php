@@ -24,4 +24,16 @@ Class PrimeTable {
             $this->cmdLineArgs = $arvg;
 	}
         
+        /**
+         * 
+         * @param string $arg
+         * @return bool
+         */
+        public static function validNumeric(string $arg) : bool
+        {
+            if(empty($arg) || !is_numeric($arg)){
+                return false;
+            }
+            return true;
+        }
 }
