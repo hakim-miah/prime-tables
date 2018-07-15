@@ -16,7 +16,7 @@ Class PrimeTable {
          */
 	private $cmdLineArgs;
         
-	const ERROR_MSG = "";
+	const ERROR_MSG_INVALID_NUMERIC = "No argument supplied.  Please give an integer (whole number), 1 or greater.";
         
 	public function __construct(int $n, array $argv)
         {
