@@ -88,8 +88,9 @@ Class PrimeTable {
                 $primeTable[$i][0] = $primes[$i-1];
                 $primeTable[$i][$i] = $primes[$i-1]*$primes[$i-1];
                 for ($j=1; $j<=$i-1;$j++) {
-                    $primeTable[$i][$i-$j] = $primes[$i-1]*$primes[$i-$j-1];
-                    $primeTable[$i-$j][$i] = $primes[$i-$j-1]*$primes[$i-1];
+                    $result = $primes[$i-1]*$primes[$i-$j-1];
+                    $primeTable[$i][$i-$j] = $result;
+                    $primeTable[$i-$j][$i] = $result;
                 }
             }
             return $primeTable;
