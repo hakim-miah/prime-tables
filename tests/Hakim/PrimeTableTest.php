@@ -32,5 +32,14 @@ class PrimeTableTest extends TestCase
         $result = PrimeTable::generatePrimes(1);
         $this->assertEquals($result,[]);
     }
+    
+    public function testIsPrime()
+    {
+        $result = PrimeTable::isPrime(3);
+        $this->assertEquals($result,true);
+        
+        $result = PrimeTable::isPrime(4);
+        $this->assertEquals($result,false);
+    }
 
 }
