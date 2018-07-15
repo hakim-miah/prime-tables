@@ -68,7 +68,7 @@ Class PrimeTable {
                 return [];
             }
             $primes = []; $totalFound = 0; $i=2;
-            while ($totalFound != $n) {        
+            while ($totalFound !== $n) {        
                 if (self::isPrime($i)) {
                    $primes[] = $i;
                    $totalFound++;
