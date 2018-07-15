@@ -78,4 +78,21 @@ Class PrimeTable {
             return $primes;
         }
         
+        public static function createPrimeMultiTable(int $n) : array
+        {
+            $primes = self::generatePrimes($n);
+            $numberOfPrimes = count($primes);
+            $primeTable = [];$primeTable[0][0]= null;
+            for ($i=1; $i<= $numberOfPrimes;$i++) {
+                $primeTable[0][$i] = $primes[$i-1];
+                $primeTable[$i][0] = $primes[$i-1];
+                $primeTable[$i][$i] = $primes[$i-1]*$primes[$i-1];
+                for ($j=1; $j<=$i-1;$j++) {
+                    $primeTable[$i][$i-$j] = $primes[$i-1]*$primes[$i-$j-1];
+                    $primeTable[$i-$j][$i] = $primes[$i-$j-1]*$primes[$i-1];
+                }
+            }
+            return $primeTable;
+        }
+
 }
