@@ -57,7 +57,7 @@ Class PrimeTable {
         
         /**
          * Using != is faster than <= and incrementing the totalFound and 
-         * checkingis its value is faster than counting the array size (count() 
+         * checking its value is faster than counting the array size (count() 
          * or .size) each iteration.
          * @param int $n
          * @return array
