@@ -65,7 +65,7 @@ Class PrimeTable {
         public static function generatePrimes(int $n) : array
         {
             if ($n === 1) {
-                return [];
+                return [2];
             }
             $primes = []; $totalFound = 0; $i=2;
             while ($totalFound !== $n) {        
