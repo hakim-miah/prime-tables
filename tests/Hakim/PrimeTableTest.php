@@ -75,4 +75,12 @@ class PrimeTableTest extends TestCase
 		$output = exec('php main.php -3');
         $this->assertEquals($output,'No argument supplied.  Please give an integer (whole number), 1 or greater.'); 
 	}
+	
+	public function testNumberOneAsArgument()
+	{
+        $expectedResult ='|  |2 |'.PHP_EOL
+                        .'| 2 |4 |'.PHP_EOL;
+        $result = PrimeTable::get2dArraySquareString(PrimeTable::createPrimeMultiTable(1));
+        $this->assertEquals($result,$expectedResult);		
+	}
 }
