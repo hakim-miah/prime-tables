@@ -69,4 +69,10 @@ class PrimeTableTest extends TestCase
         $this->assertEquals(count($result),20000);
         
     }
+	
+	public function testNegativeNumberArgumentGiven()
+	{
+		$output = exec('php main.php -3');
+        $this->assertEquals($output,'No argument supplied.  Please give an integer (whole number), 1 or greater.'); 
+	}
 }
