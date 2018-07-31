@@ -31,7 +31,7 @@ Class PrimeTable {
          */
         public static function validNumeric(string $arg) : bool
         {
-            if(empty($arg) || !is_numeric($arg)){
+            if(empty($arg) || !is_numeric($arg) || $arg < 1){
                 return false;
             }
             return true;
