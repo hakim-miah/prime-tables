@@ -28,9 +28,6 @@ class PrimeTableTest extends TestCase
         //given N, create array of N primes (starting from 2)
         $result = PrimeTable::generatePrimes(3);
         $this->assertEquals($result,[2,3,5]);
-        
-        $result = PrimeTable::generatePrimes(1);
-        $this->assertEquals($result,[]);
     }
     
     public function testIsPrime()
